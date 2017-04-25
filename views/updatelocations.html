@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Student Scores</title>
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+    
+
+
+
+    
+    
+    
+<body id = "fourth" background = "/images/logo4.png">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class = "col-xs-12 col-sm-12" id= "head">TestScore Calculation</div>
+    <div class = "col-xs-12 col-sm-12" id= "head1">Enter Your Score From 0 to 100 </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class = "col-sm-12" id="mainForm">
+    <br>
+    <br>
+    <br>
+    <br>
+        <form action="/update/{{routeId}}" method="post">
+        <div class="col-xs-12 col-sm-4" label for = "term" id ="head2">Term/Semester</div>
+        <div class="col-xs-6 col-sm-1" id ="head30"><input type="radio" name="term" id="term" value="1">Fall</div>
+        <div class="col-xs-6 col-sm-7" id ="head30"><input type="radio" name="term" id="term" value="2">Spring</div>
+        <div class="col-xs-1 col-sm-4" label for = "studentname" id ="head2">StudentName</div>
+        <div class="col-xs-12 col-sm-8" id ="head3"><input type="text" name="studentname" id="studentname" value=""></div>
+        <div class="col-xs-1 col-sm-4" label for = "storename" id ="head2">English</div>
+        <div class="col-xs-12 col-sm-8" id ="head3"><input type="text" name="storename" id="storename" value=""></div>
+        <div class="col-xs-1 col-sm-4" label for = "storeaddress" id ="head2">Math</div>
+        <div class="col-xs-12 col-sm-8" id ="head3"><input type="text" name ="storeaddress" id="storeaddress" value=""></div>
+        <div class="col-xs-1 col-sm-4" label for = "storecity" id ="head2">Science</div>
+        <div class="col-xs-12 col-sm-8" id ="head3"><input type="text" name="storecity" id="storecity" value=""></div>
+        <div class="col-xs-1 col-sm-4" label for = "storestate" id ="head2">History</div>
+        <div class="col-xs-12 col-sm-8" id ="head3"><input type="text" name="storestate" id="storestate" value = ""></div>
+        <div class="col-xs-1 col-sm-4" label for = "storeowner" id ="head2">PE</div>
+        <div class="col-xs-12 col-sm-8" id ="head3"><input type="text" name="storeowner" id="storeowner" value = ""></div>
+        <div class="col-xs-12 col-sm-4" label for = "otherInfo" id ="head2">Computer</div>
+        <div class="col-xs-6 col-sm-8" id ="head3"><input type="text" name="otherInfo" id="otherInfo" value = ""></div>
+
+            <div class="col-xs-0 col-sm-12">`</div>
+            <div class="col-xs-0 col-sm-12">`</div>
+            <div class="col-xs-0 col-sm-12">`</div>
+        <div class="col-xs-6 col-sm-7" id = "head4"><input type="submit" value="Submit"></div>
+        
+        </form>
+    </div>    
+        
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+    </html>

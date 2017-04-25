@@ -1,0 +1,9 @@
+
+<div id="mainRes">
+
+
+{{#if dbresponse}}
+{{dbresponse.id}} : {{dbresponse.storename}} : {{dbresponse.storeaddress}} : {{dbresponse.storecity}} : {{dbresponse.storestate}}:{{dbresponse.storeowner}} : {{dbresponse.otherInfo}} <a href="/update/{{dbresponse.id}}">update</a> <a href="/delete/{{dbresponse.id}}">delete</a><br>
+{{/if}}
+
+</div>

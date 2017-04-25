@@ -1,0 +1,133 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title> Radar Chart Result </title>
+    <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
+    
+   <style>
+       #radarChart{
+           width: 300px;
+           height: 300px;
+           max-height: 500px;
+           max-width: 500px;
+           background-color: white;
+           
+        
+       }
+    
+    
+    
+    
+    
+    
+    </style>
+    </head>
+    <body id = "fourth" background = "images/logo4.png">
+       <div class="col-sm-12" id="chart2">Fall Semester Chart Result <br> You can select through the following chart options<br><a href ="/displayAll">Click Here to Edit Scores!</a></div> 
+       
+       <br>
+        <div class="col-sm-2" id="chart1"><a href = "/radarChart">Radar Chart</a></div> 
+        <div class="col-sm-2" id="chart1"><a href = "/barChart">Bar Chart</a></div>  
+        <div class="col-sm-2" id="chart1"><a href = "/line">Line Chart</a></div>    
+        <canvas id="radarChart" width="500" height="500"></canvas>
+        
+        <script>
+            var ctx = document.getElementById("radarChart");
+            radarChart.style.left = "90px";
+            radarChart.style.top = "150px";
+            radarChart.style.position = "absolute";
+            
+            
+            fetch('/getdata')
+               .then(function(response){
+                  return response.json();
+              }).then(function(data){
+                   console.log(data);                    
+                    
+                
+                var dataset = [];
+                var color = [        
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)']
+                
+             
+                
+                for(var i=0;i<data.length;i++){
+                     if (data[i].term == "1"){  
+                    dataset.push({
+                            label: [data[i].studentname],
+                            data: [data[i].storename,data[i].storeaddress,data[i].storecity,data[i].storestate,data[i].storeowner,data[i].otherInfo],
+                            backgroundColor: color[i],
+                            //borderColor: 'rgba('+(i*50+10)+','+i*20+',0,1)',
+                    });
+                     } 
+                     
+                }
+              
+                var radarChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["English","Math","Science","History","PE","Computer"],
+                        datasets: dataset
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+                
+         }
+            )
+                    
+                    
+                    
+//                    var data = {
+//                    labels:["English","Math","Science","History","PE","Computer"],
+//                    datasets:[
+//                    {
+//                     label: "My First dataset",
+//            backgroundColor: "rgba(179,181,198,0.2)",
+//            borderColor: "rgba(179,181,198,1)",
+//            pointBackgroundColor: "rgba(179,181,198,1)",
+//            pointBorderColor: "#fff",
+//            pointHoverBackgroundColor: "#fff",
+//            pointHoverBorderColor: "rgba(179,181,198,1)",
+//            data: [65, 59, 90, 81, 56, 55, 40]
+//                    }
+//                    ]
+//                    }
+//                   
+//                   var myRadarChart = new Chart (ctx,{
+//                    type: 'radar',
+//                    data: data,
+//                    options:options
+//                    })
+//                   )
+            
+        </script> 
+    </body>
+</html>

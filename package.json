@@ -1,0 +1,32 @@
+{
+  "name": "basicproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "chart.js": "^2.5.0",
+    "fetch": "^1.1.0",
+    "formdata": "^0.10.4",
+    "handlebars": "^4.0.6",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "node-fetch": "^1.6.3",
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.2",
+    "sql": "^0.74.0",
+    "sqlite3": "^3.1.8",
+    "tedious": "^1.14.0",
+    "vision": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YiTingChenJeffrey/Dynamic-Data/tree/master/Mid-Term/123"
+  }
+}

@@ -1,0 +1,66 @@
+#head {
+    font-size: 60px;
+    text-align: left;
+    color:white;
+}
+
+#head1 {
+    font-size: 20px;
+    text-align: left;
+    color:white;
+    padding-left: 10%;
+}
+
+#head2 {
+    text-align: left;
+    color: white;
+}
+
+#head3{
+    text-align: left;
+      color:black;
+    
+}
+
+#chart2{
+    text-align: left;
+    color:white;
+}
+
+#chart1 {
+    color:white;
+    text-align: center;
+    font-size: 15px;
+}
+
+#head30{
+    text-align: left;
+    color:white;
+}
+
+#head4 {
+    text-align: center;
+}
+
+#first {
+    font-size: 60px;
+    text-align: center;
+}
+
+#second {
+    text-align: center;
+    font-size: 25px;
+}
+
+#third img{
+    margin: auto;
+    display:block;
+}
+
+#fourth {
+background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+}
